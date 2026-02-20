@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    --fondoNegro: #0a0a0a;
+    --navegacionNegro: #121212;
+    --primarioMorado: #8a2be2;
+    --hoverMorado: #a044ff;
+    --textoBlanco: #ffffff;
+    --textoGris: #a0a0a0;
+    --transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--fondoNegro);
+    color: var(--textoBlanco);
+    overflow-x: hidden;
+}
+
+/* --- Barra de Navegación --- */
+.barraNavegacion {
+    background-color: var(--navegacionNegro);
+    border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.contenedorNavegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logoNavegacion {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--textoBlanco);
+    letter-spacing: -1px;
+    transition: var(--transicion);
+}
+
+.logoNavegacion .resaltado {
+    color: var(--primarioMorado);
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.logoNavegacion:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.enlacesNavegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.enlacesNavegacion a {
+    text-decoration: none;
+    color: var(--textoGris);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: var(--transicion);
+    position: relative;
+}
+
+.enlacesNavegacion a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primarioMorado);
+    transition: var(--transicion);
+}
+
+.enlacesNavegacion a:hover {
+    color: var(--textoBlanco);
+}
+
+.enlacesNavegacion a:hover::after {
+    width: 100%;
+}
+
+/* --- Contenedor Registro --- */
+.contenedorRegistro {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        url('https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=2070') no-repeat center/cover;
+    position: relative;
+}
+
+.contenedorRegistro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, transparent 0%, var(--fondoNegro) 100%);
+    pointer-events: none;
+}
+
+.registro {
+    position: relative;
+    background-color: rgba(18, 18, 18, 0.9);
+    padding: 3.5rem;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(138, 43, 226, 0.15);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    backdrop-filter: blur(20px);
+    text-align: center;
+    transition: var(--transicion);
+    z-index: 1;
+}
+
+.registro:hover {
+    border-color: var(--primarioMorado);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 1),
+        0 0 30px rgba(138, 43, 226, 0.25);
+    transform: translateY(-8px);
+}
+
+.registro h2 {
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--textoBlanco);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.registro input {
+    width: 100%;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    color: var(--textoBlanco);
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    outline: none;
+    transition: var(--transicion);
+    box-sizing: border-box;
+}
+
+.registro input:focus {
+    border-color: var(--primarioMorado);
+    background-color: rgba(138, 43, 226, 0.08);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
+    transform: scale(1.02);
+}
+
+.registro button {
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, var(--primarioMorado), #5d1aa1);
+    border: none;
+    border-radius: 12px;
+    color: var(--textoBlanco);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transicion);
+    margin-top: 1rem;
+    box-shadow: 0 8px 15px rgba(138, 43, 226, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.registro button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(138, 43, 226, 0.5);
+    background: linear-gradient(135deg, var(--hoverMorado), var(--primarioMorado));
+}
+
+.contenedorRegistro h4 {
+    position: relative;
+    z-index: 1;
+    margin-top: 2.5rem;
+    color: var(--textoGris);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.contenedorRegistro h4 a {
+    color: var(--primarioMorado);
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 5px;
+    transition: var(--transicion);
+    position: relative;
+}
+
+.contenedorRegistro h4 a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primarioMorado);
+    transform: scaleX(0);
+    transition: var(--transicion);
+}
+
+.contenedorRegistro h4 a:hover {
+    color: var(--hoverMorado);
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.contenedorRegistro h4 a:hover::after {
+    transform: scaleX(1);
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - CineFlux</title>
+    <link rel="stylesheet" href="../styles/register.css">
+</head>
+
+<body>
+    <header class="barraNavegacion">
+        <div class="contenedorNavegacion">
+            <a href="Home.html" class="logoNavegacion">
+                Cine<span class="resaltado">Flux</span>
+            </a>
+            <nav class="enlacesNavegacion">
+                <ul>
+                    <li><a href="Home.html">Inicio</a></li>
+                    <li><a href="cines.html">Cines</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                    <li><a href="dulceria.html">Dulcería</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="contenedorRegistro">
+        <div class="registro">
+            <h2>Crear Cuenta</h2>
+            <input type="text" placeholder="Nombre Completo" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="number" placeholder="Edad" min="0" max="100" required>
+            <input type="password" placeholder="Contraseña" required>
+            <input type="password" placeholder="Confirmar Contraseña" required>
+            <button type="button">Registrarse ahora</button>
+        </div>
+        <h4>¿Ya tienes una cuenta? <a href="login.html">Inicia Sesión</a></h4>
+    </div>
+
+    <script src="../js/register.js"></script>
+</body>
+
+</html>

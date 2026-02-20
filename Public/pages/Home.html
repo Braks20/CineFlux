@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CineFlux</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/Home.css">
+
+</head>
+
+<body>
+    <header class="barraNavegacion">
+        <div class="contenedorNavegacion">
+            <a href="Home.html" class="logoNavegacion">
+                Cine<span class="resaltado">Flux</span>
+            </a>
+            <nav class="enlacesNavegacion">
+                <ul>
+                    <li><a href="Home.html" class="activo">Inicio</a></li>
+                    <li><a href="cines.html">Cines</a></li>
+                    <li><a href="promociones.html">Promociones</a></li>
+                    <li><a href="dulceria.html">Dulcería</a></li>
+                </ul>
+            </nav>
+            <div class="accionesNavegacion">
+                <a href="login.html" class="botonSesion">Iniciar Sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenidoPrincipal">
+        <section class="seccionDestacada">
+            <h2 class="tituloSeccion">Películas Favoritas <span class="resaltado">esta semana</span></h2>
+
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/demon-slayer-castillo-infinito_X.jpg" class="d-block w-100" alt="Demon Slayer">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/images (1).jpg" class="d-block w-100" alt="Película 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/Untitled (1).jpg" class="d-block w-100" alt="Película 3">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="../js/home.js"></script>
+</body>
+
+</html>

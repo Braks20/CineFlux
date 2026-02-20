@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    --fondoNegro: #0a0a0a;
+    --navegacionNegro: #121212;
+    --primarioMorado: #8a2be2;
+    --hoverMorado: #a044ff;
+    --textoBlanco: #ffffff;
+    --textoGris: #a0a0a0;
+    --transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--fondoNegro);
+    color: var(--textoBlanco);
+}
+
+.barraNavegacion {
+    background-color: var(--navegacionNegro);
+    border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.contenedorNavegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logoNavegacion {
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--textoBlanco);
+    letter-spacing: -1px;
+    transition: var(--transicion);
+}
+
+.logoNavegacion .resaltado {
+    color: var(--primarioMorado);
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5);
+}
+
+.logoNavegacion:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.enlacesNavegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.enlacesNavegacion a {
+    text-decoration: none;
+    color: var(--textoGris);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: var(--transicion);
+    position: relative;
+}
+
+.enlacesNavegacion a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primarioMorado);
+    transition: var(--transicion);
+}
+
+.enlacesNavegacion a:hover {
+    color: var(--textoBlanco);
+}
+
+.enlacesNavegacion a:hover::after {
+    width: 100%;
+}
+
+.enlacesNavegacion a.activo {
+    color: var(--primarioMorado);
+    font-weight: 600;
+}
+
+.enlacesNavegacion a.activo::after {
+    width: 100%;
+}
+
+.accionesNavegacion .botonSesion {
+    background: linear-gradient(135deg, var(--primarioMorado), #5d1aa1);
+    color: var(--textoBlanco);
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicion);
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+}
+
+.accionesNavegacion .botonSesion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.5);
+    background: linear-gradient(135deg, var(--hoverMorado), var(--primarioMorado));
+}
